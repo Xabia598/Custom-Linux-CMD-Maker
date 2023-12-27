@@ -23,6 +23,8 @@ if [[ $cmd == *".sh"* ]]; then
     rm $cmd_nm 
 
     echo "COMMAND MADE :: " $cmd_nm >> log.txt
+    readlink -f $cmd >> log.txt
+    echo "---------------" >> log.txt
 
     echo "[✓] Command successfully made!"
     
